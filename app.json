@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "guiaPessoalReact",
+    "slug": "guiaPessoalReact",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "guiaPessoalReact"
+}
