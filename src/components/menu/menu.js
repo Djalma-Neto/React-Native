@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {
-  View,
   ScrollView,
-  // Dialog,
-  // Portal,
+  Dialog,
+  Portal,
   TouchableOpacity,
-  Text,
+  Text
 } from "react-native";
 import ImageBack from "../views/default/imageBack";
 import Icon from "react-native-vector-icons/FontAwesome5";
@@ -14,11 +13,13 @@ import styles from "./style";
 import Avatar from "../../components/views/user/avatar";
 
 const Menu = ({ navigation }) => {
-  // const [dialogOpen, setdialogOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   const logOut = () => {
     navigation.navigate("Login");
   };
+  const hideDialog = () =>{useState(false)}
+  const openDialog = () =>{useState(true)}
 
   return (
     <ImageBack style={styles.screen}>
@@ -41,7 +42,7 @@ const Menu = ({ navigation }) => {
         <TouchableOpacity
           style={styles.menuItem}
           onPress={() => {
-            setdialogOpen(true);
+            openDialog;
           }}
         >
           <Icon style={styles.icon} name="sign-out-alt" />
@@ -50,7 +51,7 @@ const Menu = ({ navigation }) => {
 
         {/* ..................................... */}
         {/* <Portal>
-          <Dialog visible={dialogOpen} onDismiss={setdialogOpen(false)}>
+          <Dialog visible={open} onDismiss={hideDialog}>
             <Dialog.Title>Deslogar</Dialog.Title>
             <Dialog.Content>
               <Paragraph>Deseja realmente deslogar?</Paragraph>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./src/style";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
@@ -9,6 +9,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 
 import Login from "./src/views/login/login";
 import Home from "./src/views/home/home";
+import Avatar from "./src/components/views/user/avatar";
 import MenuContent from "./src/components/menu/menu";
 
 const Drawer = createDrawerNavigator();
